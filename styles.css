@@ -243,10 +243,13 @@ nav {
 }
 
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pricing-card {
@@ -258,11 +261,12 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .pricing-card.featured {
     border: 2px solid #00d4ff;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .pricing-card.featured::before {
@@ -279,12 +283,12 @@ nav {
 }
 
 .pricing-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
 }
 
 .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.02) translateY(-5px);
 }
 
 .plan-name {
@@ -522,7 +526,7 @@ footer {
     }
 
     .pricing-card.featured:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
 
     .form-container {
